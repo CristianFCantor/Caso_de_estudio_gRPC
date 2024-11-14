@@ -1,4 +1,6 @@
 package com.uptc.frw.grpc.jpa.models;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -39,9 +41,11 @@ public class Noticia {
     // Relacion consigo misma por ID_R
     @ManyToOne
     @JoinColumn(name = "ID_R")
+    @JsonBackReference
     private Noticia noticiaRelacionada;
 
     @OneToMany(mappedBy = "noticiaRelacionada")
+    @JsonManagedReference
     private List<Noticia> noticiasRelacionadas;
 
     public Noticia() {
