@@ -75,9 +75,7 @@ public class NoticiaAgencia {
     @Override
     public String toString() {
         return "NoticiaAgencia{" +
-                "fechaAsignacion=" + fechaAgencia +
                 ", idAgencia=" + idAgencia +
-                ", id=" + id +
                 '}';
     }
 }

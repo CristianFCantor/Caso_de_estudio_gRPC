@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ImplicadoService {/**//**/
+public class ImplicadoService {/**/
     @Autowired
     private ImplicadoRepository implicadoRepository;
 
